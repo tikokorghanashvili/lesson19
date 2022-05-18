@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>form validation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="img">
-        <p class="p">hello</p>
-    </div>
+    <form action="" method="" id="registration">
+        <div>
+            <input type="username" name="username" placeholder="username" id="username">
+        </div>
+
+        <div>
+            <input type="password" name="password" placeholder="password" id="passw">
+        </div>
+        <div>
+            <input type="password" name="password2" placeholder="Repeat Password" id="passw2">
+        </div>
+
+        <div>
+            <input type="radio" name="age" id="age1">
+            <label for="age1">0-18</label>
+            <input type="radio" name="age" id="age2">
+            <label for="age2">18-35</label>
+            <input type="radio" name="age" id="age3">
+            <label for="age3">35-60</label>
+
+        </div>
+        <div>
+            <input type="checkbox" name="agree" id="checkagree">
+            <label for="checkboxagree">I agree terms and conditions</label>
+        </div>
+        <button type="submit">SEND</button>
+    </form>
     
+    <script src="script.js"></script>
 </body>
 </html>
