@@ -3,9 +3,9 @@ document.getElementById('registration').addEventListener('submit',function(event
     let errors={};
     let form=event.target;
 
-    let username=document.getElementById('username').Value;
-    if (username.length<4 || username==" "){
-        errors.username='username can not be empty and must be more then carachters';
+    let Username=document.getElementById('username').value;
+    if (Username.length<4 || Username==" "){
+        errors.Username='username can not be empty and must be more then carachters';
     }
 
     let password=document.getElementById('passw').value;
@@ -21,18 +21,69 @@ document.getElementById('registration').addEventListener('submit',function(event
         errors.agree='you must agree our terms and conditions';
     }
 
+    // radio დროს
+    let age=false;
+    form.querySelectorAll('[name="age"]').forEach(element => {
+        if (element.Checked){
+            age=true;
+        }
+    });
 
+    if (age==false){
+        errors.age='please select your age';
+    }
 
+    console.log(errors);
 
+    form.querySelectorAll('.error-text').forEach(item=>{
+        item.innerHTML=' ';
+    });
 
+    for (let item in errors){
+        let errorp=document.getElementById('error_' + item);
+        if (errorp){
+            errorp.textContent=errors[item];
+        }
+    }
 
-
-
+    if(Object.keys(errors).length==0){
+        form.submit();
+    }
 
 });
 
-let errors={
-    username:'',
-    password:'',
-    password2:'',
+
+let passwordShow=document.getElementById('showpassword');
+let toggleIconEye=document.getElementById('toggleicon');
+
+showHidePassword=()=>{
+    if (passwordShow.type=="password"){
+        passwordShow.setAttribute('type','text');
+        toggleIconEye.classList.add('fa-eye-slash');
+    }else{
+        toggleIconEye.classList.remove('fa-eye-slash');
+        passwordShow.setAttribute('type','password');
+    }
 }
+
+toggleIconEye.addEventListener('click',showHidePassword);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let errors={
+//     username:'',
+//     password:'',
+//     password2:'',
+// }
