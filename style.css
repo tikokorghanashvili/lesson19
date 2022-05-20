@@ -3,10 +3,13 @@
     font-style: italic;
     display: block;
 }
-#email{
-    display: block;
-
-}
-#registration{
-    display: block
-}
+* {
+    box-sizing: border-box;
+  }
+  /* .section{
+      background-color: gray;
+      height: 500px;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 100px;
+  } */

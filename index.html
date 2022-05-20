@@ -9,44 +9,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="POST" id="registration">
-        <div>
-            <input type="username" name="username" placeholder="username" id="username">
-            <p class="error-text" id="error_username"></p>
-        </div>
+    <section class="section">
+        <form action="" method="POST" id="registration">
+            <div class="block">
+                <input type="username" name="username" placeholder="username" id="username">
+                <p class="error-text" id="error_username"></p>
+            </div>
 
-        <div>
-            <input type="password" name="password" placeholder="password" id="passw">
-            <p class="error-text" id="error_password"></p>
-        </div>
-        <div class="password-field">
-            <input type="password" name="password2" placeholder="Repeat Password" id="passw2">
-            <p class="error-text" id="error_password2"></p>
-            <i class="fa-solid fa-eye" id="toggleicon"></i>
-        </div>
+            <div class="block">
+                <input type="password" name="password" placeholder="password" id="passw">
+                <p class="error-text" id="error_password"></p>
+            </div>
+            <div class="password-field">
+                <input type="password" name="password2" placeholder="Repeat Password" id="passw2">
+                <p class="error-text" id="error_password2"></p>
+                <i class="fa-solid fa-eye" id="toggleicon"></i>
+            </div>
 
-        <div>
-            <input type="email" placeholder="Email" id="myemail" onkeydown="validation()">
-            <p id="email"></p>
-        </div>
+            <div class="block">
+                <input type="email" placeholder="Email" id="myemail" onkeydown="validation()">
+                <p id="email"></p>
+            </div>
 
-        <div>
-            <input type="radio" name="age" id="age1">
-            <label for="age1">0-18</label>
-            <input type="radio" name="age" id="age2">
-            <label for="age2">18-35</label>
-            <input type="radio" name="age" id="age3">
-            <label for="age3">35-60</label>
-            <p class="error-text" id="error_age"></p>
-        </div>
+            <div class="block">
+                <input type="radio" name="age" id="age1">
+                <label for="age1">0-18</label>
+                <input type="radio" name="age" id="age2">
+                <label for="age2">18-35</label>
+                <input type="radio" name="age" id="age3">
+                <label for="age3">35-60</label>
+                <p class="error-text" id="error_age"></p>
+            </div>
 
-        <div>
-            <input type="checkbox" name="agree" id="checkagree">
-            <label for="checkboxagree">I agree terms and conditions</label>
-            <p class="error-text" id="error_agree"></p>
-        </div>
-        <button type="submit">SEND</button>
-    </form>
+            <div class="block">
+                <input type="checkbox" name="agree" id="checkagree">
+                <label for="checkboxagree">I agree terms and conditions</label>
+                <p class="error-text" id="error_agree"></p>
+            </div>
+            <button type="submit" class="submit">SEND</button>
+        </form>
+    </section>
     
     <script src="script.js"></script>
 </body>
